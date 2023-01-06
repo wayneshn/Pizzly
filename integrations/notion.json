@@ -1,0 +1,20 @@
+{
+  "name": "Notion",
+  "auth": {
+    "authorizationURL": "https://api.notion.com/v1/oauth/authorize",
+    "tokenURL": "https://api.notion.com/v1/oauth/token",
+    "authType": "OAUTH2",
+    "authorizationParams": { "response_type": "code", "owner": "user" },
+    "auth": {
+      "accessType": "offline"
+    }
+  },
+  "request": {
+    "baseURL": "https://api.notion.com/v1/",
+    "headers": {
+      "Accept": "application/json",
+      "Authorization": "Bearer ${auth.accessToken}",
+      "User-Agent": "Pizzly"
+    }
+  }
+}
